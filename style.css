@@ -7,6 +7,7 @@
 
 :root {
     --primary-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+    --hero-bg:  linear-gradient(135deg, #3e3f97, #493281);
     --secondary-gradient: linear-gradient(135deg, #3b82f6, #2dd4bf);
     --dark-bg: #0f172a;
     --darker-bg: #020617;
@@ -46,11 +47,26 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
     z-index: 1001;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+
+.logo img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
 .hamburger {
@@ -155,6 +171,11 @@ nav {
         z-index: 1002;
     }
 
+    .nav-container.active .logo img {
+        height: 35px;
+        filter: brightness(0) invert(1);
+    }
+
     .nav-container.active .hamburger {
         position: absolute;
         top: 1rem;
@@ -224,7 +245,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: var(--primary-gradient);
+    background: var(--hero-bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,19 +295,34 @@ nav {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background: var(--secondary-gradient);
+    background: linear-gradient(-45deg, #3b82f6, #6366f1, #8b5cf6, #2dd4bf);
+    background-size: 300% 300%;
     color: white;
     text-decoration: none;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, animation-duration 0.3s ease;
     border: none;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+    animation-duration: 4s;
 }
 
 /* Sections */
@@ -436,6 +472,24 @@ section h2 {
 
 .pricing-card .cta-button {
     margin-top: auto;
+    background: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    transition: all 0.3s ease;
+}
+
+.pricing-card.featured .cta-button {
+    background: var(--secondary-gradient);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.pricing-card .cta-button:not(.featured .cta-button):hover {
+    background: rgba(59, 130, 246, 0.7);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+.pricing-card.featured .cta-button:hover {
+    background: var(--secondary-gradient);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
 }
 
 /* Contact Section */
@@ -460,6 +514,7 @@ section h2 {
 
 #contactForm input,
 #contactForm textarea {
+    font-family: Arial, Helvetica, sans-serif;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -479,6 +534,8 @@ section h2 {
 #contactForm textarea {
     height: 150px;
     resize: vertical;
+    max-height: 400px;
+    min-height: 52px;
 }
 
 .status-message {
@@ -592,6 +649,7 @@ footer::before {
 .social-links {
     display: flex;
     gap: 1rem;
+    align-items: start;
 }
 
 .social-links a {
