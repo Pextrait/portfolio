@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tectum Digital - Создание сайтов для бизнеса</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tectum Digital</div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#pricing">Цены</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Создаем сайты для вашего бизнеса</h1>
+            <p>Быстро. Качественно. Недорого.</p>
+            <a href="#contact" class="cta-button">Получить консультацию</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Сайт-визитка</h3>
+                <p>Простой и эффективный способ представить ваш бизнес в интернете</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Интернет-магазин</h3>
+                <p>Полноценный онлайн-магазин с удобной системой оплаты</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Адаптивный дизайн</h3>
+                <p>Сайты, которые отлично работают на всех устройствах</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Наши работы</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Проект 1">
+                <div class="portfolio-overlay">
+                    <h3>Магазин одежды</h3>
+                    <p>Интернет-магазин с каталогом товаров</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Проект 2">
+                <div class="portfolio-overlay">
+                    <h3>Салон красоты</h3>
+                    <p>Сайт-визитка с онлайн-записью</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300x200" alt="Проект 3">
+                <div class="portfolio-overlay">
+                    <h3>Строительная компания</h3>
+                    <p>Корпоративный сайт с портфолио</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Тарифы</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Старт</h3>
+                <div class="price">от 15 000 ₽</div>
+                <ul>
+                    <li>Одностраничный сайт</li>
+                    <li>Адаптивный дизайн</li>
+                    <li>До 5 страниц</li>
+                    <li>Базовое SEO</li>
+                </ul>
+                <a href="#contact" class="cta-button">Заказать</a>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Бизнес</h3>
+                <div class="price">от 30 000 ₽</div>
+                <ul>
+                    <li>Многостраничный сайт</li>
+                    <li>Адаптивный дизайн</li>
+                    <li>До 10 страниц</li>
+                    <li>Расширенное SEO</li>
+                    <li>Интеграция с CRM</li>
+                </ul>
+                <a href="#contact" class="cta-button">Заказать</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Премиум</h3>
+                <div class="price">от 50 000 ₽</div>
+                <ul>
+                    <li>Интернет-магазин</li>
+                    <li>Адаптивный дизайн</li>
+                    <li>Неограниченное количество страниц</li>
+                    <li>Полное SEO-продвижение</li>
+                    <li>Интеграция с 1С</li>
+                </ul>
+                <a href="#contact" class="cta-button">Заказать</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Свяжитесь с нами</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <input name="name" type="text" placeholder="Ваше имя" required />
+                <input name="email" type="email" placeholder="Ваш Email" required />
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit" class="cta-button">Отправить</button>
+            </form>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+7 (999) 123-45-67</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@tectumdigital.ru</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>г. Москва, ул. Примерная, 123</p>
+                </div>
+            </div>
+        </div>
+        <div id="statusMessage" class="status-message"></div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Tectum Digital</div>
+            <div class="footer-links">
+                <a href="#home">Главная</a>
+                <a href="#services">Услуги</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#pricing">Цены</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tectum Digital. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
